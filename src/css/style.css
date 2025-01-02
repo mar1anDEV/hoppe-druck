@@ -70,7 +70,7 @@ html, body {
 
 .panel {
     background-color: #c9c4c4;
-    height: 500px;
+    height: 600px;
     width: 90%;
     max-width: 900px;
     border-radius: 10px;
@@ -125,7 +125,12 @@ html, body {
     opacity: 1 !important;
 }
 
-
+.first-category-of-inputs,
+.secondary-category-of-inputs{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
 .inputText {
     height: 50px;
     display: block;
@@ -150,24 +155,19 @@ html, body {
 }
 .form-container-inputs {
     display: flex;
+    flex-direction: column;
     width: 100%;
     gap: 10px;
     padding-left: 30px;
     padding-right: 30px;
 }
-.artikel-input {
-    flex-grow: 6 !important; /* Makes this the largest */
+.namen-input{
+    flex-grow: 3;
 }
 
-.sn-input {
-    flex-grow: 0.15 !important; /* Makes this smaller than the first */
+.field-input{
+    width: 100%;
 }
-
-.menge-input {
-    flex-grow: 0 !important; /* Makes this the smallest */
-}
-
-
 
 
 .btn-main {
@@ -204,7 +204,7 @@ html, body {
 .brands{
     display: flex;
     justify-content: center;
-    padding: 40px 120px;
+    padding: 20px 120px;
     align-items: center;
 }
 .brand{
