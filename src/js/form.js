@@ -15,6 +15,8 @@ function initializeForm() {
         e.preventDefault();
 
         let inputArtikel = document.getElementById('inputArtikel').value;
+        let inputNamen = document.querySelector('.inputNamen').value;
+        let inputProduktNamen = inputNamen;
         let displayArtikel = inputArtikel;
         let cleanArtikel = inputArtikel.replace(/\s+/g, ''); 
         const inputSNumber = document.getElementById('inputSN').value.toUpperCase() + '/';
@@ -32,7 +34,7 @@ function initializeForm() {
         mainPanel.appendChild(secondPanel);
 
         const etiketContainer = secondPanel.querySelector('.etiket-container');
-        etiketContainer.innerHTML = generateBarCode(cleanArtikel, displayArtikel, inputSNumber, inputCount);
+        etiketContainer.innerHTML = generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSNumber, inputCount);
 
         const backBtn = document.getElementById('back-btn');
         backBtn.addEventListener('click', function () {
@@ -42,7 +44,7 @@ function initializeForm() {
     });
 }
 
-function generateBarCode(cleanArtikel, displayArtikel, inputSNumber, inputCount) {
+function generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSNumber, inputCount) {
     let output = '';
     for (let i = 1; i <= inputCount; i++) {
         output += `
@@ -78,7 +80,7 @@ function generateBarCode(cleanArtikel, displayArtikel, inputSNumber, inputCount)
                 width: 3,
                 height: 40,
                 displayValue: true,
-                text: `${inputSNumber}${i}`,
+                text: `${inputProduktNamen}, ${inputSNumber}${i}`,
                 fontOptions: 'bold',
                 font: 'monospace',
                 textAlign: 'center',
@@ -125,6 +127,7 @@ function printEvent(i) {
 
     
 }
+
 document.addEventListener('DOMContentLoaded', () => {
     addSpace();
     initializeForm();
