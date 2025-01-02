@@ -125,7 +125,6 @@ function printEvent(i) {
 
     
 }
-
 document.addEventListener('DOMContentLoaded', () => {
     addSpace();
     initializeForm();
