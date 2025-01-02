@@ -40,24 +40,38 @@
                     <form id="submitForm">
                         <div class="form-container">
                             <div class="form-container-inputs">
-                                <div class="field-input artikel-input">
-                                    <div class="text"><label for="inputArtikel" ><strong>
-                                        <em style="font-size: 20px;">Artikelnummer</em> 
-                                    </strong><span style="color: red;">*</span></label></div>
-                                    <input type="text" id="inputArtikel" class="inputText inputNumber" name="Artikelnummer" autocomplete="off" placeholder="z.B 5600 0001 1000" required>
+                                
+                                <div class="first-category-of-inputs">
+                                    <div class="field-input artikel-input">
+                                        <div class="text"><label for="inputArtikel" ><strong>
+                                            <em style="font-size: 20px;">Artikelnummer</em> 
+                                        </strong><span style="color: red;">*</span></label></div>
+                                        <input type="text" id="inputArtikel" class="inputText inputNumber" name="Artikelnummer" autocomplete="off" placeholder="z.B 5600 0001 1000" required>
+                                    </div>
+                                    <div class="field-input sn-input">
+                                        <div class="text"><label for="inputSN"><strong>
+                                            <em style="font-size: 20px;">SN Nummer</em> 
+                                        </strong><span style="color: red;">*</span></label></div>
+                                        <input type="text" id="inputSN" class="inputText sn-value" name="SNnummer" autocomplete="off" placeholder="z.B SN223355" required>
+                                    </div>
+
                                 </div>
-                                <div class="field-input sn-input">
-                                    <div class="text"><label for="inputSN"><strong>
-                                        <em style="font-size: 20px;">SN Nummer</em> 
-                                    </strong><span style="color: red;">*</span></label></div>
-                                    <input type="text" id="inputSN" class="inputText sn-value" name="SNnummer" autocomplete="off" placeholder="z.B SN223355" required>
+
+                                <div class="secondary-category-of-inputs">
+                                    <div class="field-input namen-input">
+                                        <div class="text"><label for="inputArtikel" ><strong>
+                                            <em style="font-size: 20px;">Produkt Namen</em> 
+                                        </strong><span style="color: red;">*</span></label></div>
+                                        <input type="text" class="inputText inputNamen" name="Artikelnummer" autocomplete="off" placeholder="z.B Hydrauliktank VAT-Alu 510x620x670mm-190L" required>
+                                    </div>
+                                    <div class="field-input menge-input" style="width: 100px;">
+                                        <div class="text"><label for="inputMenge" ><strong>
+                                            <em style="font-size: 20px;">Menge</em> 
+                                        </strong><span style="color: red;">*</span></label></div>
+                                        <input type="number" class="inputText" id="inputMenge" class="form-control" min="1" name="menge" max="300" value="1" step="1">
+                                    </div>
                                 </div>
-                                <div class="field-input menge-input">
-                                    <div class="text"><label for="inputMenge" ><strong>
-                                        <em style="font-size: 20px;">Menge</em> 
-                                    </strong><span style="color: red;">*</span></label></div>
-                                    <input type="number" class="inputText" id="inputMenge" class="form-control" min="1" name="menge" max="300" value="1" step="1">
-                                </div>
+                                
                             </div>
                             
                             <div class="buttons">
@@ -95,17 +109,6 @@
                         </div>
                     </div>
                 </div>
-
-                    <div class="exit">
-                            <button type="button" id="close-btn" class="btn-close" aria-label="Fenster schließen">
-                                <svg fill="#000000" width="24px" class="svg" height="24px" viewBox="0 -64 640 640" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z"/>
-                                </svg>
-                                <span class="close-title">
-                                    Fenster schließen
-                                </span>
-                            </button> 
-                    </div>
 
             </div>
 
