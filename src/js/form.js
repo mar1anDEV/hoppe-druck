@@ -121,6 +121,7 @@ function printEvent(i) {
 
     window.print();
 
+    document.body.innerHTML = originalContent;
 
     
 }
