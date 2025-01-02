@@ -16,6 +16,7 @@ function initializeForm() {
 
         let inputArtikel = document.getElementById('inputArtikel').value;
         let inputNamen = document.querySelector('.inputNamen').value;
+        inputNamen += ', ';
         let inputProduktNamen = inputNamen;
         let displayArtikel = inputArtikel;
         let cleanArtikel = inputArtikel.replace(/\s+/g, ''); 
