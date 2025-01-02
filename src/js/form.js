@@ -30,23 +30,29 @@ function initializeForm() {
         secondPanel.classList.add('panel-switch');
         secondPanel.innerHTML = `
             <div class="etiket-container"></div>
-            <button class="back-btn" id="back-btn">Back</button>
+            <button class="back-btn" id="back-btn"><span style="font-size: 20px; cursor: pointer;">Zurrück</span></button>
         `;
         mainPanel.appendChild(secondPanel);
 
         const etiketContainer = secondPanel.querySelector('.etiket-container');
-        etiketContainer.innerHTML = generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSNumber, inputCount);
+        etiketContainer.innerHTML = generateBarCode(cleanArtikel, displayArtikel, inputProduktNamen, inputSNumber, inputCount);
 
         const backBtn = document.getElementById('back-btn');
         backBtn.addEventListener('click', function () {
-            window.location.reload();
+            window.location.href = "https://mar1andev.github.io/hoppe-druck/";
         });
 
     });
 }
 
-function generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSNumber, inputCount) {
+function generateBarCode(cleanArtikel, displayArtikel, inputProduktNamen, inputSNumber, inputCount) {
     let output = '';
+    const maximalNumber = 2
+    if(maximalNumber >= inputCount){
+        const gridOFF = document.querySelector('.etiket-container');
+        gridOFF.style.display = 'flex'
+        gridOFF.style.gap = "20px"
+    }else{console.log("bigger")}
     for (let i = 1; i <= inputCount; i++) {
         output += `
             <div class="print print-${i}">
@@ -65,10 +71,8 @@ function generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSN
                     </div>
                 </div>
                 <button class="printEvent print-event-${i}" onclick="printEvent(${i})">
-        
-        <img src="media/printer-svgrepo-com.png" loading="eager" height="30" width="30px" alt="print button">
-
-</button>
+                    <img src="media/printer-svgrepo-com.png" loading="eager" height="30" width="30px" alt="print button">
+                </button>
             </div>
         `;
     }
@@ -99,37 +103,36 @@ function generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSN
 }
 
 function printEvent(i) {
- 
     const originalContent = document.body.innerHTML;
-
 
     document.querySelector('.main-section').style.display = 'none';
 
-
     const printSection = document.querySelector(`[data-panel-id="panel-${i}"]`).cloneNode(true);
 
-  
     printSection.style.display = "flex";
     printSection.style.justifyContent = "center";
     printSection.style.alignItems = "center";
     printSection.style.position = "relative";
     printSection.style.top = "50%";
-    printSection.style.transform = 'scale(4.5)';
+    printSection.style.transform = 'scale(3.5)';
     printSection.style.padding = '0';
-
 
     document.body.innerHTML = '';
     document.body.appendChild(printSection);
 
-
     window.print();
 
     document.body.innerHTML = originalContent;
-
     
+    const backBtn = document.getElementById('back-btn');
+    backBtn.addEventListener('click', function() {
+        window.location.reload();
+    });
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     addSpace();
     initializeForm();
 });
+
