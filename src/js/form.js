@@ -81,7 +81,7 @@ function generateBarCode(cleanArtikel, displayArtikel,inputProduktNamen, inputSN
                 width: 3,
                 height: 40,
                 displayValue: true,
-                text: `${inputProduktNamen}, ${inputSNumber}${i}`,
+                text: `${inputProduktNamen}${inputSNumber}${i}`,
                 fontOptions: 'bold',
                 font: 'monospace',
                 textAlign: 'center',
