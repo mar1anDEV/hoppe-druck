@@ -63,7 +63,7 @@ function generateBarCode(cleanArtikel, displayArtikel, inputSNumber, inputCount)
                 </div>
                 <button class="printEvent print-event-${i}" onclick="printEvent(${i})">
         
-        <img src="media/printer-svgrepo-com.png" height="30" width="30px" alt="print button">
+        <img src="media/printer-svgrepo-com.png" loading="eager" height="30" width="30px" alt="print button">
 
 </button>
             </div>
