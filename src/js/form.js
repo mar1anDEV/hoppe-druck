@@ -83,7 +83,7 @@ function generateBarCode(cleanArtikel, displayArtikel, inputProduktNamen, inputS
             JsBarcode(element, cleanArtikel, {
                 format: 'CODE128',
                 width: 3,
-                height: 40,
+                height: 33,
                 displayValue: true,
                 text: `${inputProduktNamen}${inputSNumber}${i}`,
                 fontOptions: 'bold',
