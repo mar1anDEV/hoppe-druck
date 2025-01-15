@@ -1,0 +1,43 @@
+.row {
+    padding: 6px !important;
+    margin: 0 !important; /* If you also want to remove the negative margins */
+}
+.list-group-item {
+    border-radius: 0 !important;
+}
+.scrollable-list {
+    max-height: 550px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.scrollspy-example{
+    max-height: 550px;
+    overflow-y: auto;
+    padding-right: 15px; 
+}
+.barcode-row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#barcode{
+    height: 120px;
+}
+.list-group-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+@media print {
+    body { margin: 0; }
+    .panel-container-switch {
+        width: 8cm;
+        height: 5cm;
+        margin: 1cm auto; /* Center horizontally */
+        page-break-after: always;
+        box-sizing: border-box;
+    }
+}
