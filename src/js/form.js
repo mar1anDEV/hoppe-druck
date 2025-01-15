@@ -173,6 +173,7 @@ function printEvent() {
         panelContainerItems.forEach(panelContainerItem => {
             panelContainerItem.style.transform = 'scale(3.2)';
         });
+
         let listBarcode = document.createElement('div');
         listBarcode.classList.add('main-print-list');
         listBarcode.style.display = 'flex';
@@ -184,28 +185,32 @@ function printEvent() {
         listBarcode.style.width = '100%';
         listBarcode.style.backgroundColor = 'red';
 
-        
-        for (let barCode of barcodes) {
-            listBarcode.appendChild(barCode.cloneNode(true)); 
+        // Clone the first barcode 2 times
+        if (barcodes.length > 0) {
+            const firstBarcode = barcodes[0].cloneNode(true);
+            listBarcode.appendChild(firstBarcode.cloneNode(true)); // First copy
+            listBarcode.appendChild(firstBarcode.cloneNode(true)); // Second copy
         }
 
-       
+        // Append remaining barcodes as they are
+        for (let i = 1; i < barcodes.length; i++) {
+            listBarcode.appendChild(barcodes[i].cloneNode(true));
+        }
+
         const mainSection = document.querySelector('.wrapper-section');
         if (mainSection && mainSection.parentNode) {
             mainSection.parentNode.removeChild(mainSection);
         }
 
-        
         document.body.appendChild(listBarcode);
 
         window.print();
         document.body.innerHTML = originalContent;
 
-
-    const backBtn = document.getElementById('back-btn');
-    backBtn.addEventListener('click', function () {
-        window.location.reload();
-    });
+        const backBtn = document.getElementById('back-btn');
+        backBtn.addEventListener('click', function () {
+            window.location.reload();
+        });
     }
 }
 
