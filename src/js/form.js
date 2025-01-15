@@ -185,14 +185,14 @@ function printEvent() {
         listBarcode.style.width = '100%';
         listBarcode.style.backgroundColor = 'red';
 
-        // Clone the first barcode 2 times
+        
         if (barcodes.length > 0) {
             const firstBarcode = barcodes[0].cloneNode(true);
-            listBarcode.appendChild(firstBarcode.cloneNode(true)); // First copy
-            listBarcode.appendChild(firstBarcode.cloneNode(true)); // Second copy
+            listBarcode.appendChild(firstBarcode.cloneNode(true)); 
+            listBarcode.appendChild(firstBarcode.cloneNode(true)); 
         }
 
-        // Append remaining barcodes as they are
+        
         for (let i = 1; i < barcodes.length; i++) {
             listBarcode.appendChild(barcodes[i].cloneNode(true));
         }
