@@ -52,12 +52,17 @@ function initializeForm() {
         </div>
         <div class="interact-buttons" style="z-index: 9999999999; position: absolute; top: 87%; margin-left: 10px; display: flex; flex-direction: row; justify-content: space-between; gap: 10px; width: auto;">
             <button type="button" id="back-btn" onclick="window.location.reload()">
-                <img src="/media/back-arrow.webp" alt="Back Icon" style="filter: invert(1) brightness(2); margin-right: 5px;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16" style="stroke-width: 2;">
+                <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5"/>
+                </svg>
                 <span>Zurrück</span>
             </button>
 
             <button type="button" id="pop-up-help-page" onclick="initializeHelpButton()">
-                <img src="/media/ask.webp" alt="Help Icon" style="filter: invert(1) brightness(2);">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-raised-hand" viewBox="0 0 16 16" style="stroke-width: 2;">
+                <path d="M6 6.207v9.043a.75.75 0 0 0 1.5 0V10.5a.5.5 0 0 1 1 0v4.75a.75.75 0 0 0 1.5 0v-8.5a.25.25 0 1 1 .5 0v2.5a.75.75 0 0 0 1.5 0V6.5a3 3 0 0 0-3-3H6.236a1 1 0 0 1-.447-.106l-.33-.165A.83.83 0 0 1 5 2.488V.75a.75.75 0 0 0-1.5 0v2.083c0 .715.404 1.37 1.044 1.689L5.5 5c.32.32.5.754.5 1.207"/>
+                <path d="M8 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"/>
+                </svg>
                 <span>Hilfe</span>
             </button>
         </div>
