@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drucken</title>
+    <link rel="stylesheet" href="src/css/drücken-section.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+    <main class="wrapper-section" style="height: 100vh; width: 100%;">
+        <section class="section-child" style=" position: relative; height: 100%; width: 100%;">
+            <div class="image-wrapper" style="height: 100%; width: 100%;">
+                <img src="media/85126822_193643055372251_207363735470211072_n.jpg" style="object-fit: cover; height: 100%; width: 100%;" alt="" loading="eager" >
+            </div>
+            <div class="dark-overlay" style="height: 100%; width: 100%; background-color: rgba(0, 0, 0, 0.2); position: absolute; top: 0;"></div>
+            <nav class="navbar-brand" style="background-color: #E3010F; width: 100%; opacity: 0.9; z-index: 99999; position: absolute; top: 0; display: block; padding: 20px 10px;">
+                <div class="navcont" style=" margin: 0 20px">
+                    <div class="brand-logo" style="max-width: fit-content; padding: 10px;">
+                        <a href="index.html" style="height: fit-content;">
+                            <img src="media/logo_300x42.webp" loading="lazy"  
+                            height="auto" style="max-width: 100%;" alt="Hoppe Brand Logo">
+                        </a>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="PanelContainerMain" style="position: absolute; height: 100%; width: 100%;top: 0;">
+
+                <div class="panel-content" style="display: flex; justify-content: center; align-items: center; height: 100%; width: 100%; position: absolute; top: 0; z-index: 9999;">
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div class="panel-title">
+                                <h3>
+                                    <strong>
+                                       ~ Barcode Generierung ~
+                                    </strong>
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <form id="submitForm">
+                                <div class="form-container">
+                                    <div class="form-container-inputs">
+                                        
+                                        <div class="first-category-of-inputs">
+                                            <div class="field-input artikel-input">
+                                                <div class="text"><label for="inputArtikel" ><strong>
+                                                    <em style="font-size: 20px;">Artikelnummer</em> 
+                                                </strong><span style="color: red;">*</span></label></div>
+                                                <input type="text" id="inputArtikel" class="inputText inputNumber" name="Artikelnummer" autocomplete="off" placeholder="z.B 5600 0001 1000" required>
+                                            </div>
+                                            <div class="field-input sn-input">
+                                                <div class="text"><label for="inputSN"><strong>
+                                                    <em style="font-size: 20px;">SN Nummer</em> 
+                                                </strong><span style="color: red;">*</span></label></div>
+                                                <input type="text" id="inputSN" class="inputText sn-value" name="SNnummer" autocomplete="off" placeholder="z.B SN223355" required>
+                                            </div>
+        
+                                        </div>
+        
+                                        <div class="secondary-category-of-inputs">
+                                            <div class="field-input namen-input">
+                                                <div class="text"><label for="inputArtikel" ><strong>
+                                                    <em style="font-size: 20px;">Produktname</em> 
+                                                </strong><span style="color: red;">*</span></label></div>
+                                                <input type="text" class="inputText inputProduktNamen" name="Artikelnummer" autocomplete="off" placeholder="z.B Hydrauliktank VAT-Alu 190L" required>
+                                            </div>
+                                            <div class="field-input menge-input" style="width: 100px;">
+                                                <div class="text"><label for="inputMenge" ><strong>
+                                                    <em style="font-size: 20px;">Menge</em> 
+                                                </strong><span style="color: red;">*</span></label></div>
+                                                <input type="number" class="inputText" id="inputMenge" class="form-control" min="1" name="menge" max="300" value="1" step="1">
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="buttons">
+                                        <div class="container">
+                                            <div class="abrechen-btn btn-box">
+                                                <button type="reset" id="reset" class="btn danger bg-white"style="font-size: 20px;">Zurücksetzen</button>
+                                            </div>
+                                            <div class="bestätigen-btn btn-box">
+                                                <button type="submit" id="confirm" class="btn succes bg-black text-white" style="font-size: 20px;">Bestätigen</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+        
+                        </div>
+                        
+        
+                        <div class="container-brands">
+                            <div class="brands">
+                                <div class="hoppe brand">
+                                    <a href="https://hoppe.parts/">
+                                        <img src="media/logo_300x42.webp" loading="lazy" style="width: 150px;" alt="Brand">
+                                    </a>
+                                </div>
+                                <div class="hofmeister brand">
+                                    <a href="https://www.hofmei.de/">
+                                        <img src="media/hofmei-large.svg" loading="lazy" alt="Brand">
+                                    </a>
+                                </div>
+                                <div class="fricke brand">
+                                    <a href="https://www.fricke.de/">
+                                        <img src="media/fricke_logo.BxfcmfTT.webp" loading="lazy" style="width: 120px;" alt="Brand">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+        
+                    </div>
+                </div>
+
+            </div>
+
+            
+
+        </section>
+    </main> 
+</body>
+<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+<script src="src/js/reset.js"></script>
+<script src="src/js/addSpace.js"></script>
+<script src="src/js/addUppercase.js"></script>
+<script src="src/js/form.js"></script>
+<script src="src/js/help.js"></script>
+</html>
+
