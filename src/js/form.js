@@ -52,12 +52,12 @@ function initializeForm() {
         </div>
         <div class="interact-buttons" style="z-index: 9999999999; position: absolute; top: 87%; margin-left: 10px; display: flex; flex-direction: row; justify-content: space-between; gap: 10px; width: auto;">
             <button type="button" id="back-btn" onclick="window.location.reload()">
-                <img src="/media/back-arrow.png" alt="Back Icon" style="filter: invert(1) brightness(2); margin-right: 5px;">
+                <img src="/media/back-arrow.webp" alt="Back Icon" style="filter: invert(1) brightness(2); margin-right: 5px;">
                 <span>Zurrück</span>
             </button>
 
             <button type="button" id="pop-up-help-page" onclick="initializeHelpButton()">
-                <img src="/media/ask.png" alt="Help Icon" style="filter: invert(1) brightness(2);">
+                <img src="/media/ask.webp" alt="Help Icon" style="filter: invert(1) brightness(2);">
                 <span>Hilfe</span>
             </button>
         </div>
