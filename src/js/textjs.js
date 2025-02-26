@@ -13,7 +13,7 @@ copyBtn.addEventListener('click', () => {
             iconContainer.style.setProperty('--tooltip-text', '"Kopiert"');
         })
         .catch(err => {
-            console.error('Error copying text: ', err);
+            console.error(err);
         });
 });
 
