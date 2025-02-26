@@ -1,6 +1,6 @@
 .row {
     padding: 6px !important;
-    margin: 0 !important; /* If you also want to remove the negative margins */
+    margin: 0 !important; 
 }
 .list-group-item {
     border-radius: 0 !important;
