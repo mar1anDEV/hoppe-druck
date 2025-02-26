@@ -83,8 +83,9 @@ function initializeForm() {
         const listIncrement = secondPanel.querySelector('.list-group');
         listIncrement.innerHTML = generateSNcode(inputSNumber, inputCount);
         const barcodeIncrement = secondPanel.querySelector('.columnBarcode');
-        
         barcodeIncrement.innerHTML = generateBarcode(inputCount, scanCleanArtikel, inputSNumber,prodktName, displayArtikel);
+        
+        
     });
 }
 
@@ -123,7 +124,7 @@ function generateBarcode(inputCount, scanCleanArtikel, inputSNumber, prodktName,
                                                     <div class="second-row" style="display: flex; flex-direction: column; width: 100%;">
                                                         <svg id="barcode-${i}"></svg>
                                                         <div class="barcode-bottom-text" style="display: flex; justify-content: space-between; padding: 0px 10px">
-                                                            <span class="sp-article" style="font-weight: bold; font-size: 12px;">${prodktName}</span>
+                                                            <p class="sp-article" id="sp-Article">${prodktName}</p>
                                                             <div><img src="media/logo_300x42 - label.webp" loading="lazy" style="width: 120px;" alt="Brand"></div>
                                                         </div>
                                                     </div>
@@ -138,6 +139,11 @@ function generateBarcode(inputCount, scanCleanArtikel, inputSNumber, prodktName,
                                         </div>
                                     </div>             
         `;
+
+       
+        
+        
+        
     }
 
     setTimeout(() => {
@@ -155,7 +161,6 @@ function generateBarcode(inputCount, scanCleanArtikel, inputSNumber, prodktName,
                     textPosition: 'top',
                     fontOptions: 'bold',
                     font: 'monospace',
-                    textAlign: 'center',
                     textMargin: 5,
                     background: '#ffffff',
                 });
