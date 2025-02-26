@@ -37,7 +37,7 @@
     .panel-container-switch {
         width: 8cm;
         height: 5cm;
-        margin: 1cm auto; /* Center horizontally */
+        margin: 1cm auto; 
         page-break-after: always;
         box-sizing: border-box;
     }
