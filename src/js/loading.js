@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     function loadContent(){
         const sectionChild = document.querySelector(".section-child");
-        sectionChild.style.opacity = 0;
+        sectionChild.style.visibility = "hidden";
+        sectionChild.style.transition = "visibility 0.5s";
         setTimeout(() => {
             const files = [
                 'media/85126822_193643055372251_207363735470211072_n.jpg',
@@ -49,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (sectionChild) {
-                    sectionChild.style.opacity = 1;
+                    sectionChild.style.visibility = "visible";
                 }
 
                 if (parentPage) {
