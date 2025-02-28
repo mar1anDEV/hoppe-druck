@@ -9,11 +9,12 @@
     <link rel="icon" sizes="80x80" href="https://hoppe.parts/static/version1737490907/frontend/Fricke/Hoppe/de_DE/Magento_Theme/favicon.ico">
     <link rel="stylesheet" href="src/css/drücken-section.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/loader.css">
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="background-color: brown;">
     <main class="wrapper-section" style="height: 100vh; width: 100%;">
-        <section class="section-child" style=" position: relative; height: 100%; width: 100%;">
+        <section class="section-child" style=" position: relative; height: 100%; width: 100%; opacity: 0;">
             <div class="image-wrapper" style="height: 100%; width: 100%;">
                 <img src="media/85126822_193643055372251_207363735470211072_n.jpg" style="object-fit: cover; height: 100%; width: 100%;" alt="Background Iamge" loading="eager" >
             </div>
@@ -145,15 +146,40 @@
                 </div>
 
             </div>
-
-            
-
         </section>
+
+
+        <div class="page-wrapper-loader" style="position: absolute; top: 0; min-height: 100%; width: 100%; opacity: 1;">
+            <div class="loader-content" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+                <div class="loader-content-container" style="display: flex; flex-direction: column; align-items: center;">
+                    <div class="loading-logo" style="margin-bottom: 2.25rem;">
+                        <img src="/media/logo_300x42.webp" alt="logo" height="50px" loading="eager">
+                    </div>
+                    <div class="banter-loader" style="margin-top: 3.50rem;">
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                        <div class="banter-loader__box"></div>
+                      </div>
+                </div>
+                
+            </div>
+    </div>
+
+
+
+
     </main> 
 </body>
+<script src="src/js/loading.js"></script>
 <script src="src/js/textjs.js"></script>
-        <script src="assets/jsBarcode/JsBarcode.all.min.js"></script>
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/jsBarcode/JsBarcode.all.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="src/js/reset.js"></script>
 <script src="src/js/addSpace.js"></script>
 <script src="src/js/addUppercase.js"></script>
