@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     function loadContent(){
         const sectionChild = document.querySelector(".section-child");
-        sectionChild.style.display = "none";
-        sectionChild.style.transition = "visibility 0.5s";
+        
         setTimeout(() => {
             const files = [
                 'media/85126822_193643055372251_207363735470211072_n.jpg',
