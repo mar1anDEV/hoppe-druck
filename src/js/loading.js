@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     function loadContent(){
         const sectionChild = document.querySelector(".section-child");
-        sectionChild.style.visibility = "hidden";
+        sectionChild.style.display = "none";
         sectionChild.style.transition = "visibility 0.5s";
         setTimeout(() => {
             const files = [
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
                 if (sectionChild) {
-                    sectionChild.style.visibility = "visible";
+                    sectionChild.style.display = "block";
                 }
 
                 if (parentPage) {
